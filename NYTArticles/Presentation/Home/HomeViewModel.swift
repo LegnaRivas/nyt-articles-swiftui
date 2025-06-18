@@ -12,10 +12,10 @@ final class HomeViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
 
-    private let service: NYTAPIService
+    private let fetchArticlesUseCase: FetchPopularArticlesUseCase
 
-    init(service: NYTAPIService = .shared) {
-        self.service = service
+    init(useCase: FetchPopularArticlesUseCase = FetchPopularArticlesUseCase(repository: ArticleRepositoryImpl())) {
+        self.fetchArticlesUseCase = useCase
         fetchArticles()
     }
 
@@ -23,7 +23,7 @@ final class HomeViewModel: ObservableObject {
         isLoading = true
         errorMessage = nil
 
-        service.fetchPopularArticles { [weak self] result in
+        fetchArticlesUseCase.execute { [weak self] result in
             DispatchQueue.main.async {
                 self?.isLoading = false
                 switch result {
