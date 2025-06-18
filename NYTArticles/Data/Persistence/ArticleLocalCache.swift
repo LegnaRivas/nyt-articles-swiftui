@@ -1,4 +1,9 @@
-// Data/Persistence/ArticleLocalCache.swift
+//
+//  ArticleLocalCache.swift
+//  NYTArticles
+//
+//  Created by Angel Rivas on 18/06/25.
+//
 
 import Foundation
 

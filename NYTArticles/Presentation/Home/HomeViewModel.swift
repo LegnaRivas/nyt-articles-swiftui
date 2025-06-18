@@ -13,9 +13,14 @@ final class HomeViewModel: ObservableObject {
     @Published var errorMessage: String?
 
     private let fetchArticlesUseCase: FetchPopularArticlesUseCase
+    private let cache = ArticleLocalCache() // 👈
 
     init(useCase: FetchPopularArticlesUseCase = FetchPopularArticlesUseCase(repository: ArticleRepositoryImpl())) {
         self.fetchArticlesUseCase = useCase
+        if let cached = cache.load() {
+            self.articles = cached
+        }
+
         fetchArticles()
     }
 
@@ -29,6 +34,7 @@ final class HomeViewModel: ObservableObject {
                 switch result {
                 case .success(let articles):
                     self?.articles = articles
+                    self?.cache.save(articles)
                 case .failure(let error):
                     self?.errorMessage = error.localizedDescription
                 }
