@@ -13,6 +13,7 @@ struct Article: Identifiable, Codable {
     let byline: String
     let publishedDate: String
     let url: String
+    let abstract: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -20,5 +21,6 @@ struct Article: Identifiable, Codable {
         case byline
         case publishedDate = "published_date"
         case url
+        case abstract
     }
 }

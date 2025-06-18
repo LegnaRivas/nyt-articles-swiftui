@@ -25,17 +25,19 @@ struct HomeView: View {
                     }
                 } else {
                     List(viewModel.articles) { article in
-                        VStack(alignment: .leading, spacing: 6) {
-                            Text(article.title)
-                                .font(.headline)
-                            Text(article.byline)
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Text(article.publishedDate)
-                                .font(.caption)
-                                .foregroundColor(.secondary)
+                        NavigationLink(destination: ArticleDetailView(viewModel: ArticleDetailViewModel(article: article))) {
+                            VStack(alignment: .leading, spacing: 6) {
+                                Text(article.title)
+                                    .font(.headline)
+                                Text(article.byline)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                Text(article.publishedDate)
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                            .padding(.vertical, 4)
                         }
-                        .padding(.vertical, 4)
                     }
                 }
             }
