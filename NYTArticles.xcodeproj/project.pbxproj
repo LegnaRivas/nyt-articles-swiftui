@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		C155C0082E034F7400751D6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C155BFA62E0303AC00751D6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C155BFAD2E0303AC00751D6F;
+			remoteInfo = NYTArticles;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		C155BFAE2E0303AC00751D6F /* NYTArticles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTArticles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C155C0042E034F7400751D6F /* NYTArticlesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTArticlesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = NYTArticles;
 			sourceTree = "<group>";
 		};
+		C155C0052E034F7400751D6F /* NYTArticlesTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NYTArticlesTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C155BFAB2E0303AC00751D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C155C0012E034F7400751D6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				C155BFB02E0303AC00751D6F /* NYTArticles */,
+				C155C0052E034F7400751D6F /* NYTArticlesTests */,
 				C155BFAF2E0303AC00751D6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				C155BFAE2E0303AC00751D6F /* NYTArticles.app */,
+				C155C0042E034F7400751D6F /* NYTArticlesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = C155BFAE2E0303AC00751D6F /* NYTArticles.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C155C0032E034F7400751D6F /* NYTArticlesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C155C00A2E034F7400751D6F /* Build configuration list for PBXNativeTarget "NYTArticlesTests" */;
+			buildPhases = (
+				C155C0002E034F7400751D6F /* Sources */,
+				C155C0012E034F7400751D6F /* Frameworks */,
+				C155C0022E034F7400751D6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C155C0092E034F7400751D6F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C155C0052E034F7400751D6F /* NYTArticlesTests */,
+			);
+			name = NYTArticlesTests;
+			packageProductDependencies = (
+			);
+			productName = NYTArticlesTests;
+			productReference = C155C0042E034F7400751D6F /* NYTArticlesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,11 @@
 				TargetAttributes = {
 					C155BFAD2E0303AC00751D6F = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					C155C0032E034F7400751D6F = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+						TestTargetID = C155BFAD2E0303AC00751D6F;
 					};
 				};
 			};
@@ -100,12 +153,20 @@
 			projectRoot = "";
 			targets = (
 				C155BFAD2E0303AC00751D6F /* NYTArticles */,
+				C155C0032E034F7400751D6F /* NYTArticlesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C155BFAC2E0303AC00751D6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C155C0022E034F7400751D6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +183,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C155C0002E034F7400751D6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C155C0092E034F7400751D6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C155BFAD2E0303AC00751D6F /* NYTArticles */;
+			targetProxy = C155C0082E034F7400751D6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C155BFBB2E0303AE00751D6F /* Debug */ = {
@@ -317,6 +393,50 @@
 			};
 			name = Release;
 		};
+		C155C00B2E034F7400751D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZC27RPM6BB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.NYTArticlesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTArticles.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NYTArticles";
+			};
+			name = Debug;
+		};
+		C155C00C2E034F7400751D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZC27RPM6BB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.NYTArticlesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTArticles.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NYTArticles";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +454,15 @@
 			buildConfigurations = (
 				C155BFBE2E0303AE00751D6F /* Debug */,
 				C155BFBF2E0303AE00751D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C155C00A2E034F7400751D6F /* Build configuration list for PBXNativeTarget "NYTArticlesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C155C00B2E034F7400751D6F /* Debug */,
+				C155C00C2E034F7400751D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
